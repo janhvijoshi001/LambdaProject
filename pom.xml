@@ -24,7 +24,6 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 <dependencies>
-
     <dependency>
         <groupId>org.glassfish</groupId>
         <artifactId>javax.json</artifactId>
