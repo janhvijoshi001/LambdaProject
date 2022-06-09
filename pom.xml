@@ -24,11 +24,16 @@
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
 <dependencies>
-
     <dependency>
         <groupId>org.glassfish</groupId>
         <artifactId>javax.json</artifactId>
         <version>1.0.4</version>
+    </dependency>
+    <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>RELEASE</version>
+        <scope>compile</scope>
     </dependency>
 </dependencies>
 

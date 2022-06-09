@@ -15,15 +15,22 @@ public class EnumTesting {
 
     public static FriesSize value;
 
+    private static String serviceBy;
+
     public EnumTesting(FriesSize friesSize) {
         if(friesSize == null) {
             value = FriesSize.LARGE;
         }else value = friesSize;
     }
 
+    static {
+        System.out.println("testing the block initialization");
+        serviceBy = "Will";
+    }
+
     public JsonObject details(CoffeeSize size, int orderNumber) {
         JsonObject response = Json.createObjectBuilder().add("Size-->",size.toString())
-                    .add("orderNumber--->" ,orderNumber).build();
+                    .add("orderNumber--->" ,orderNumber).add("service By--->",serviceBy).build();
         return response;
     }
 
@@ -31,7 +38,8 @@ public class EnumTesting {
         JsonObject response = Json.createObjectBuilder().add("Size-->",size.toString())
                 .add("orderNumber--->" ,orderNumber)
                 .add("Customer Name--->",name)
-                .add("fries Size--->",value.toString()).build();
+                .add("fries Size--->",value.toString())
+                .add("service By--->",serviceBy).build();
         return response;
     }
 }
